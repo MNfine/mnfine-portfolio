@@ -99,7 +99,7 @@ const pageContent = {
         "Once pulled an all-nighter to finish my first AI project because I was just too excited about it.",
         "Always eager to explore new technologies and share what I learn with friends.",
         "“Code then sleep” – MNfine's familiar philosophy during every deadline season!",
-        "Don't drink coffee; I just “run on energy drinks” and a passion for learning."
+        "Don't drink coffee, I just “run on energy drinks” and a passion for learning."
       ]
     },
     footer: {
@@ -364,34 +364,27 @@ export default function EnhancedPortfolioPage() {
     <div ref={containerRef} className="min-h-screen relative overflow-hidden">
 
       {/* --- Fixed Navbar --- */}
-      <nav className="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md z-50 py-4 px-6 shadow-lg border-b border-emerald-700/50">
+      <nav className="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md z-50 py-4 px-4 sm:px-6 shadow-lg border-b border-emerald-700/50"> 
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          {/* Logo/Name */}
-          <a href={pageContent[language].navbar.homeUrl} className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_10px_rgba(34,197,94,0.3)] hover:scale-105 transition-transform duration-200">
+          <a href={pageContent[language].navbar.homeUrl} className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_10px_rgba(34,197,94,0.3)] hover:scale-105 transition-transform duration-200">
             MNfine
           </a>
-
-          {/* Navigation Links */}
-          <div className="flex items-center gap-6">
-            <a href={pageContent[language].navbar.homeUrl} className="text-gray-300 hover:text-green-300 transition-colors duration-200 text-lg font-medium">
+          <div className="flex items-center gap-3 sm:gap-6"> 
+            <a href={pageContent[language].navbar.homeUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
               {pageContent[language].navbar.home}
             </a>
-            {/* NEW: Link for Projects */}
-            <a href={pageContent[language].navbar.projectsUrl} className="text-gray-300 hover:text-green-300 transition-colors duration-200 text-lg font-medium">
+            <a href={pageContent[language].navbar.projectsUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
               {pageContent[language].navbar.projects}
             </a>
-            {/* Link for Articles */}
-            <a href={pageContent[language].navbar.articlesUrl} className="text-gray-300 hover:text-green-300 transition-colors duration-200 text-lg font-medium">
+            <a href={pageContent[language].navbar.articlesUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
               {pageContent[language].navbar.articles}
             </a>
-            <a href={pageContent[language].navbar.contactUrl} className="text-gray-300 hover:text-green-300 transition-colors duration-200 text-lg font-medium">
+            <a href={pageContent[language].navbar.contactUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
               {pageContent[language].navbar.contact}
             </a>
-
-            {/* Language Switch */}
           </div>
         </div>
-      </nav>
+      </nav> 
 
       {/* Animated Background */}
       <motion.div
@@ -455,35 +448,35 @@ export default function EnhancedPortfolioPage() {
 
       {/* Language conversion button */}
         <div className="fixed top-2 right-2 z-50 flex">
-          <span
-            onClick={() => setLanguage('en')}
-            className={`
-              text-xs md:text-sm font-semibold px-3 py-1 cursor-pointer
-              transition-all duration-300 ease-in-out
-              ${language === 'en'
-                ? 'bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-emerald-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]'
-                : 'text-gray-400 hover:text-green-300'
-              }
-            `}
-          >
-            ENG
-          </span>
-          <span
-            onClick={() => setLanguage('vi')}
-            className={`
-              text-xs md:text-sm font-semibold px-3 py-1 cursor-pointer
-              transition-all duration-300 ease-in-out
-              ${language === 'vi'
-                ? 'bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-emerald-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]'
-                : 'text-gray-400 hover:text-green-300'
-              }
-            `}
-          >
-            VIE
-          </span>
-        </div>
+        <span
+          onClick={() => setLanguage('en')}
+          className={`
+            text-xs sm:text-sm md:text-base font-semibold px-2 py-1 sm:px-3 sm:py-1 cursor-pointer
+            transition-all duration-300 ease-in-out
+            ${language === 'en'
+              ? 'bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-emerald-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]'
+              : 'text-gray-400 hover:text-green-300'
+            }
+          `}
+        >
+          ENG
+        </span>
+        <span
+          onClick={() => setLanguage('vi')}
+          className={`
+            text-xs sm:text-sm md:text-base font-semibold px-2 py-1 sm:px-3 sm:py-1 cursor-pointer
+            transition-all duration-300 ease-in-out
+            ${language === 'vi'
+              ? 'bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-emerald-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]'
+              : 'text-gray-400 hover:text-green-300'
+            }
+          `}
+        >
+          VIE
+        </span>
+      </div>
 
-      <div className="relative z-10 px-4 pt-24 pb-10">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-24 pb-10">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -764,14 +757,14 @@ export default function EnhancedPortfolioPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.3, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="max-w-6xl mx-auto py-16 px-4"
+          className="max-w-6xl mx-auto py-8 px-4 sm:py-16 sm:px-6"
         >
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {projectData.map((project, idx) => {
               const IconComponent = project.icons[0].type;
@@ -813,7 +806,7 @@ export default function EnhancedPortfolioPage() {
                       layoutId={`accent-${idx}`}
                     />
 
-                    <CardContent className="p-8 h-full flex flex-col relative z-10">
+                    <CardContent className="p-6 sm:p-8 h-full flex flex-col relative z-10">
                       {/* Icon */}
                       <motion.div
                         whileHover={{
@@ -825,7 +818,7 @@ export default function EnhancedPortfolioPage() {
                           stiffness: 300,
                           damping: 10
                         }}
-                        className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center mb-6 shadow-lg border border-green-500/50 relative overflow-hidden"
+                        className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center mb-4 sm:mb-6 shadow-lg border border-green-500/50 relative overflow-hidden"
                       >
                         {/* Icon glow effect */}
                         <motion.div
@@ -840,28 +833,28 @@ export default function EnhancedPortfolioPage() {
                             ease: "easeInOut"
                           }}
                         />
-                        <IconComponent className="w-8 h-8 text-green-100 relative z-10" />
+                        <IconComponent className="w-7 h-7 sm:w-8 sm:h-8 text-green-100 relative z-10" />
                       </motion.div>
 
                       {/* Content */}
                       <div className="flex-grow">
                         <motion.h3
-                          className="text-2xl font-bold text-green-300 mb-3 group-hover:text-green-200 transition-colors duration-300"
+                          className="text-xl sm:text-2xl font-bold text-green-300 mb-2 sm:mb-3 group-hover:text-green-200 transition-colors duration-300"
                           whileHover={{ x: 5 }}
                         >
                           {project.title}
                         </motion.h3>
-                        <p className="text-gray-300 mb-6 leading-relaxed">
+                        <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                           {project.description[language]}
                         </p>
 
                         {/* Tech Tags */}
-                        <div className="flex flex-wrap gap-2 mb-6">
+                        <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6">
                           {project.tags.map((tag, techIdx) => (
                             <motion.span
                               key={techIdx}
                               whileHover={{ scale: 1.1 }}
-                              className="px-3 py-1 text-xs bg-green-900/40 text-green-200 rounded-full backdrop-blur-sm border border-green-600/30 hover:border-green-500/50 transition-all duration-200"
+                              className="px-2 py-0.5 text-xs bg-green-900/40 text-green-200 rounded-full backdrop-blur-sm border border-green-600/30 hover:border-green-500/50 transition-all duration-200"
                             >
                               {tag}
                             </motion.span>
@@ -878,9 +871,9 @@ export default function EnhancedPortfolioPage() {
                         whileTap={{ scale: 0.97 }}
                         className="block"
                       >
-                        <Button className="w-full bg-white border border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400 hover:text-emerald-700 font-semibold text-base py-3 rounded-full transition-all duration-200 shadow-sm flex items-center justify-center">
-                        <Github className="w-5 h-5 mr-2 text-emerald-600 hover:text-emerald-700" />
-                        <span className="text-emerald-600 hover:text-emerald-700">{pageContent[language].projects.viewOnGithub}</span>
+                        <Button className="w-full bg-white border border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400 hover:text-emerald-700 font-semibold text-sm sm:text-base py-2 sm:py-3 rounded-full transition-all duration-200 shadow-sm flex items-center justify-center"> 
+                         <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 text-emerald-600 hover:text-emerald-700" /> 
+                         <span className="text-emerald-600 hover:text-emerald-700">{pageContent[language].projects.viewOnGithub}</span>
                         </Button>
                       </motion.a>
                     </CardContent>
