@@ -211,8 +211,8 @@ const projectData = [
     icons: [<Bot key="bot1"/>],
     tags: ["Llama 2", "NLP", "Legal AI"],
     description: {
-      en: pageContent.en.projects.viewOnGithub, 
-      vi: pageContent.vi.projects.viewOnGithub, 
+      en: "Legal chatbot using Llama 2, RAG & prompt engineering",
+      vi: "Chatbot pháp lý sử dụng Llama 2, RAG & kỹ thuật prompt",
     },
     githubLink: "https://github.com/MNfine/llama2-lawbot",
      // NEW: Add image/video preview
