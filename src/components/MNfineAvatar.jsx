@@ -1,6 +1,6 @@
 import React from "react";
 
-const AVATAR_URL = "./avatar-mnfine.png"; 
+const AVATAR_URL = "./avatar-mnfine.png"; // path
 
 export default function MNfineAvatar({ size = 320 }) {
   return (
