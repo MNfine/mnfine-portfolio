@@ -526,7 +526,7 @@ export default function EnhancedPortfolioPage() {
                   hothiminhngoc7461@gmail.com
                 </span>
                 <a
-                  href="https://facebook.com/MNfine"
+                  href="https://www.facebook.com/minh.ngoc.411702"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-300 text-base flex items-center gap-2 hover:text-blue-200 transition"
@@ -537,7 +537,7 @@ export default function EnhancedPortfolioPage() {
                   Facebook
                 </a>
                 <a
-                  href="https://linkedin.com/in/MNfine"
+                  href="http://linkedin.com/in/ngọc-hồ-thị-minh-359763369"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sky-300 text-base flex items-center gap-2 hover:text-sky-200 transition"
