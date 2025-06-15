@@ -504,32 +504,31 @@ export default function EnhancedPortfolioPage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-              className="mb-8 md:mb-0"
-              style={{ maxWidth: '250px' }}
+              className="mb-8 md:mb-0 max-w-[150px] md:max-w-[250px]"
             >
-              <MNfineAvatar size={250} /> {/* component MNfineAvatar */}
+              <MNfineAvatar size={window.innerWidth < 768 ? 150 : 250} /> {/* Adjust MNfineAvatar size dynamically */}
             </motion.div>
 
             {/* Quick Stats */}
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-emerald-700/50 rounded-xl p-6 shadow-xl shadow-emerald-900/20 text-left h-[250px] w-[300px]">
-              <div className="flex flex-col gap-3">
-                <span className="text-gray-300 text-base">
+            <div className="bg-gray-800/50 backdrop-blur-sm border border-emerald-700/50 rounded-xl p-6 shadow-xl shadow-emerald-900/20 text-left h-[220px] sm:h-[250px] w-[280px] sm:w-[300px]">
+              <div className="flex flex-col gap-2 sm:gap-3">
+                <span className="text-gray-300 text-sm sm:text-base">
                   Ho Chi Minh, Viet Nam
                 </span>
-                <span className="text-green-300 text-base">
+                <span className="text-green-300 text-sm sm:text-base">
                   AI Engineer
                 </span>
-                <span className="text-emerald-300 text-base">
+                <span className="text-emerald-300 text-sm sm:text-base">
                   Startup Mindset
                 </span>
-                <span className="text-green-400 text-base">
+                <span className="text-green-400 text-sm sm:text-base">
                   hothiminhngoc7461@gmail.com
                 </span>
                 <a
                   href="https://www.facebook.com/minh.ngoc.411702"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-300 text-base flex items-center gap-2 hover:text-blue-200 transition"
+                  className="text-blue-300 text-sm sm:text-base flex items-center gap-2 hover:text-blue-200 transition"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="inline-block flex-shrink-0">
                     <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.876V15.89h-2.54v-2.89h2.54v-2.205c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.463h-1.261c-1.242 0-1.631.771-1.631 1.562V13h2.773l-.443 2.89h-2.33v6.986C18.343 21.128 22 16.991 22 12"/>
@@ -540,7 +539,7 @@ export default function EnhancedPortfolioPage() {
                   href="http://linkedin.com/in/ngọc-hồ-thị-minh-359763369"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sky-300 text-base flex items-center gap-2 hover:text-sky-200 transition"
+                  className="text-sky-300 text-sm sm:text-base flex items-center gap-2 hover:text-sky-200 transition"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="inline-block flex-shrink-0">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75c.966 0 1.75.783 1.75 1.75s-.784 1.75-1.75 1.75zm13.5 10.268h-3v-4.604c0-1.098-.021-2.509-1.528-2.509-1.529 0-1.763 1.195-1.763 2.428v4.685h-3v-9h2.885v1.233h.041c.403-.765 1.388-1.568 2.859-1.568 3.058 0 3.624 2.012 3.624 4.629v4.706z"/>
@@ -588,7 +587,7 @@ export default function EnhancedPortfolioPage() {
             duration: 0.8,
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
-          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed"
+          className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed"
           >
           {pageContent[language].hero.tagline1}
           <span className="text-green-400 font-semibold glow-text">
@@ -617,18 +616,18 @@ export default function EnhancedPortfolioPage() {
                      shadow-emerald-900/20
                      transform hover:scale-[1.005] transition-transform duration-300 ease-out"
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] mb-8">
             {pageContent[language].about.title}
           </h2>
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-6">
             {pageContent[language].about.intro}
           </p>
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
+          <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
             {pageContent[language].about.workIsAbout}
           </p>
 
           {/* Styles "My work is about" */}
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-8">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6 sm:mb-8">
             {pageContent[language].about.points.map((point, idx) => (
               <motion.li
                 key={idx}
@@ -649,7 +648,7 @@ export default function EnhancedPortfolioPage() {
             ))}
           </ul>
 
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-4">
+          <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed mb-2 sm:mb-4">
             {pageContent[language].about.exploring}
           </p>
 
@@ -693,7 +692,7 @@ export default function EnhancedPortfolioPage() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
             >
-              <Badge className="bg-gradient-to-r from-green-900/80 to-green-700/80 hover:from-green-800 hover:to-green-600 text-green-100 text-base px-6 py-3 rounded-full shadow-lg backdrop-blur-md border border-green-400/40 hover:border-green-300/60 transition-all duration-300">
+              <Badge className="bg-gradient-to-r from-green-900/80 to-green-700/80 hover:from-green-800 hover:to-green-600 text-green-100 text-sm sm:text-base px-6 py-3 rounded-full shadow-lg backdrop-blur-md border border-green-400/40 hover:border-green-300/60 transition-all duration-300">
                 {tag}
               </Badge>
             </motion.div>
@@ -713,21 +712,21 @@ export default function EnhancedPortfolioPage() {
         >
           {/* My Expertise Title - Split for custom styling */}
           <h2 className="text-center font-extrabold mb-12">
-            <span className="text-gray-200 text-4xl md:text-5xl drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            <span className="text-gray-200 text-3xl sm:text-4xl md:text-5xl drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
               {pageContent[language].skills.title_my_expertise.whitePart}{" "}
             </span>
-            <span className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+            <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)]">
               {pageContent[language].skills.title_my_expertise.gradientPart}
             </span>
           </h2>
 
-          <div className="flex flex-col lg:flex-row justify-around gap-12 lg:gap-8 p-6">
+          <div className="flex flex-col lg:flex-row justify-around gap-12 lg:gap-8 p-6 sm:p-6">
             {/* Technical Skills */}
-            <div className="lg:w-1/2 flex flex-col items-center p-4">
-              <h3 className="text-3xl font-bold text-gray-100 mb-6 pb-2 border-b-2 border-gray-700 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+            <div className="lg:w-1/2 flex flex-col items-center p-2 sm:p-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-6 pb-2 border-b-2 border-gray-700 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
                 {pageContent[language].skills.title_technical}
               </h3>
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-sm sm:max-w-md">
                 {pageContent[language].skills.technical.map((skill, idx) => (
                   <TechnicalSkillBar key={idx} name={skill.name} icon={skill.icon} level={skill.level} />
                 ))}
@@ -737,11 +736,11 @@ export default function EnhancedPortfolioPage() {
             <div className="lg:border-l-2 lg:border-emerald-700/50 lg:h-auto my-auto" /> {/* Divider */}
 
             {/* Professional Skills */}
-            <div className="lg:w-1/2 flex flex-col items-center p-4">
-              <h3 className="text-3xl font-bold text-gray-100 mb-6 pb-2 border-b-2 border-gray-700 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+            <div className="lg:w-1/2 flex flex-col items-center p-2 sm:p-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-4 sm:mb-6 pb-2 border-b-2 border-gray-700 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
                 {pageContent[language].skills.title_professional}
               </h3>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-12 max-w-md w-full">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-8 sm:gap-y-12 max-w-sm w-full">
                 {pageContent[language].skills.professional.map((skill, idx) => (
                   <ProfessionalSkillCircle key={idx} name={skill.name} level={skill.level} />
                 ))}
@@ -764,7 +763,7 @@ export default function EnhancedPortfolioPage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center"
           >
             {projectData.map((project, idx) => {
               const IconComponent = project.icons[0].type;
@@ -772,6 +771,7 @@ export default function EnhancedPortfolioPage() {
                 <motion.div
                 key={project.id}
                 variants={itemVariants}
+                className="w-full max-w-sm"
                 whileHover={{
                   y: -15,
                   scale: 1.02,
@@ -896,10 +896,10 @@ export default function EnhancedPortfolioPage() {
                      border border-emerald-700/50 shadow-xl
                      shadow-emerald-900/20"
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] mb-8 pb-2">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] mb-6 sm:mb-8 pb-2">
             {pageContent[language].academicArticles.title}
           </h2>
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-12">
+          <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-12">
             {pageContent[language].academicArticles.description}
           </p>
 
@@ -908,7 +908,7 @@ export default function EnhancedPortfolioPage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {pageContent[language].academicArticles.articles.map((article, idx) => (
               <motion.div
@@ -928,16 +928,16 @@ export default function EnhancedPortfolioPage() {
                 className="bg-gradient-to-br from-black/90 via-gray-900/90 to-green-900/10 backdrop-blur-xl border-2 border-green-700/30 hover:border-green-500/60 rounded-3xl overflow-hidden shadow-xl transition-all duration-300 h-full flex flex-col"
               >
                 <a href={article.link} target="_blank" rel="noopener noreferrer" className="p-6 flex flex-col h-full">
-                  <h3 className="text-2xl font-bold text-green-300 mb-2 group-hover:text-green-200 transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-green-300 mb-2 group-hover:text-green-200 transition-colors duration-300">
                     {article.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-4">
+                  <p className="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-4">
                     {article.authors} - {article.date}
                   </p>
                   {/* You can add a short abstract/description here if you have it */}
                   {/* <p className="text-gray-300 mb-4 flex-grow">{article.abstract}</p> */}
-                  <span className="text-emerald-400 hover:text-emerald-300 mt-auto flex items-center justify-end">
-                    Read More <ArrowRight className="ml-2 w-4 h-4" />
+                  <span className="text-emerald-400 hover:text-emerald-300 mt-auto flex items-center justify-end text-sm sm:text-base">
+                    Read More <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                   </span>
                 </a>
               </motion.div>
@@ -951,12 +951,12 @@ export default function EnhancedPortfolioPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.3, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="max-w-2xl mx-auto mt-12 mb-10 bg-gray-900/80 rounded-2xl p-6 shadow-lg border border-emerald-700/40"
+          className="max-w-xl mx-auto mt-8 sm:mt-12 mb-8 sm:mb-10 bg-gray-900/80 rounded-2xl p-6 shadow-lg border border-emerald-700/40"
         >
-          <h3 className="text-xl font-bold text-green-400 mb-2 flex items-center gap-2">
+          <h3 className="text-lg sm:text-xl font-bold text-green-400 mb-2 flex items-center gap-2">
             <span>✨ {pageContent[language].funFacts.title}</span>
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-emerald-200 text-base">
+          <ul className="list-disc pl-5 sm:pl-6 space-y-1 sm:space-y-2 text-emerald-200 text-sm sm:text-base">
             {pageContent[language].funFacts.items.map((fact, idx) => (
               <motion.li
                 key={idx}
