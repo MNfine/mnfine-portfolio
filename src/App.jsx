@@ -9,6 +9,7 @@ import MNfineAvatar from './components/MNfineAvatar';
 import TechnicalSkillBar from './components/TechnicalSkillBar';
 import ProfessionalSkillCircle from './components/ProfessionalSkillCircle';
 import { Menu, X } from "lucide-react";
+import ContactModal from './components/ContactModal';
 
 // pageContent 
 const pageContent = {
@@ -21,7 +22,6 @@ const pageContent = {
       homeUrl: "#avatar",
       projectsUrl: "#projects", 
       articlesUrl: "#academic-articles",
-      contactUrl: "#footer",
     },
     hero: {
       tagline1: "Information Technology Student at ",
@@ -116,7 +116,6 @@ const pageContent = {
       homeUrl: "#avatar",
       projectsUrl: "#projects", 
       articlesUrl: "#academic-articles",
-      contactUrl: "#footer",
     },
     hero: {
       tagline1: "Sinh viên ngành Công Nghệ Thông Tin tại ",
@@ -305,6 +304,8 @@ export default function EnhancedPortfolioPage() {
   { /* State for menu open/close */ }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+  { /* State for contact modal */ }
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -400,22 +401,24 @@ export default function EnhancedPortfolioPage() {
             </button>
 
             {/* Desktop Navigation */}
-            <ul className="hidden md:flex items-center space-x-6 lg:space-x-8">
-              {Object.keys(pageContent[language].navbar).map((key) => {
-                if (key.endsWith('Url')) return null; 
-                return (
-                  <motion.li key={key} whileHover={{ y: -2, scale: 1.05 }}>
-                    <a
-                      href={pageContent[language].navbar[`${key}Url`]}
-                      className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium"
-                      onClick={() => setIsMenuOpen(false)} 
-                    >
-                      {pageContent[language].navbar[key]}
-                    </a>
-                  </motion.li>
-                );
-              })}
-            </ul>
+            <div className="hidden md:flex items-center space-x-8">
+               <a href={pageContent[language].navbar.homeUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
+                {pageContent[language].navbar.home}
+              </a>
+              <a href={pageContent[language].navbar.projectsUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
+                {pageContent[language].navbar.projects}
+              </a>
+              <a href={pageContent[language].navbar.articlesUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
+                {pageContent[language].navbar.articles}
+              </a>
+              <button 
+                type="button"
+                onClick={() => setIsContactModalOpen(true)}
+                className="text-sm sm:text-lg text-gray-300 hover:text-green-300 font-medium cursor-pointer transition-colors duration-200 p-0 bg-transparent border-0 font-inherit"
+              >
+                {pageContent[language].navbar.contact}
+              </button>
+            </div>
 
             {/* Language Switcher */}
             <div className="ml-4 md:ml-6 flex items-center bg-gray-700/50 rounded-full p-1 border border-emerald-600/40">
@@ -468,6 +471,13 @@ export default function EnhancedPortfolioPage() {
           })}
         </motion.ul>
       </motion.nav>
+
+      {/* Contact Modal */}
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        language={language}
+      />
 
       {/* Animated Background */}
       <motion.div
