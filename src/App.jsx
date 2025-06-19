@@ -17,11 +17,11 @@ const pageContent = {
     navbar: {
       home: "Home",
       projects: "Projects", 
-      articles: "Articles",
+      blogs: "Blogs",
       contact: "Contact",
       homeUrl: "#avatar",
       projectsUrl: "#projects", 
-      articlesUrl: "#academic-articles",
+      blogsUrl: "#blogs",
     },
     hero: {
       tagline1: "Information Technology Student at ",
@@ -68,27 +68,39 @@ const pageContent = {
     projects: {
       viewOnGithub: "View on GitHub",
     },
-    academicArticles: {
-      title: "Academic Articles & Research (Coming soon)",
-      description: "Here are some academic articles and research papers I have contributed to or authored.",
-      articles: [
+    blogs: {
+      title: "Blogs (Coming soon)",
+      description: "Here are some blog posts I've written and shared.",
+      blogs: [
         {
           title: "The Impact of AI on Legal Document Analysis",
-          link: "https://example.com/article1",
-          date: "May 2024",
+          link: "https://spectrum-swallow-230.notion.site/T-c-ng-c-a-AI-Trong-Ph-n-T-ch-T-i-Li-u-Ph-p-L-216ba08c537280f79530da13ac51b1d9",
+          date: "June 2025",
           authors: "MNfine"
         },
         {
-          title: "RISC-V Architecture: A Performance Analysis",
-          link: "https://example.com/article2",
-          date: "March 2024",
+          title: "Redis: High-Performance Caching for Real-Time Systems",
+          link: "https://spectrum-swallow-230.notion.site/Redis-B-Nh-m-T-c-Cao-V-a-N-ng-Cho-H-Th-ng-ng-D-ng-Hi-n-i-217ba08c5372806d8232f11709f55e5b",
+          date: "June 2025",
           authors: "MNfine"
         },
         {
           title: "Enhancing User Experience with LLMs in Education",
           link: "https://example.com/article3",
-          date: "Jan 2024",
+          date: "June 2025",
           authors: "MNfine"
+        },
+        {
+          title: "AI in Healthcare",
+          link: "https://spectrum-swallow-230.notion.site/Tr-Tu-Nh-n-T-o-V-ng-D-ng-Trong-Y-T-T-L-Thuy-t-n-Th-c-Ti-n-217ba08c537280bf88e9fe518fd7dec5",
+          date: "Nov 2023",
+          authors: "MNfine"
+        },
+        {
+          title: "DSA-Learning about structured data trees",
+          link: "https://spectrum-swallow-230.notion.site/T-ng-Quan-V-C-u-Tr-c-C-y-Trong-Khoa-H-c-M-y-T-nh-217ba08c53728037866dd07a73dac046",
+          date: "Mar 2024",
+          authors: "MNfine, Huynh Thanh Dan, Nguyen Bui Nhat Anh"
         }
       ],
     },
@@ -111,11 +123,11 @@ const pageContent = {
     navbar: {
       home: "Trang chủ",
       projects: "Dự án", 
-      articles: "Bài viết",
+      blogs: "Bài viết",
       contact: "Liên hệ",
       homeUrl: "#avatar",
       projectsUrl: "#projects", 
-      articlesUrl: "#academic-articles",
+      blogsUrl: "#blogs",
     },
     hero: {
       tagline1: "Sinh viên ngành Công Nghệ Thông Tin tại ",
@@ -162,19 +174,19 @@ const pageContent = {
     projects: {
       viewOnGithub: "Xem trên GitHub",
     },
-    academicArticles: {
-      title: "Bài viết & Nghiên cứu Khoa học (Sắp ra mắt)",
-      description: "Đây là một số bài viết học thuật và nghiên cứu mà tôi đã đóng góp hoặc là tác giả chính.",
-      articles: [
+    blogs: {
+      title: "Bài viết (Sắp ra mắt)",
+      description: "Dưới đây là một số bài blog mà tôi đã viết và chia sẻ.",
+      blogs: [
         {
           title: "Tác động của AI trong phân tích tài liệu pháp lý",
-          link: "https://example.com/article1-vi",
+          link: "https://spectrum-swallow-230.notion.site/T-c-ng-c-a-AI-Trong-Ph-n-T-ch-T-i-Li-u-Ph-p-L-216ba08c537280f79530da13ac51b1d9",
           date: "Tháng 5, 2024",
           authors: "MNfine"
         },
         {
-          title: "Kiến trúc RISC-V: Phân tích hiệu năng",
-          link: "https://example.com/article2-vi",
+          title: "Redis: Tăng tốc độ truy cập dữ liệu trong hệ thống thời gian thực",
+          link: "https://spectrum-swallow-230.notion.site/Redis-B-Nh-m-T-c-Cao-V-a-N-ng-Cho-H-Th-ng-ng-D-ng-Hi-n-i-217ba08c5372806d8232f11709f55e5b",
           date: "Tháng 3, 2024",
           authors: "MNfine"
         },
@@ -183,6 +195,18 @@ const pageContent = {
           link: "https://example.com/article3-vi",
           date: "Tháng 1, 2024",
           authors: "MNfine"
+        },
+        {
+          title: "Trí Tuệ Nhân Tạo Trong Y Tế",
+          link: "https://spectrum-swallow-230.notion.site/Tr-Tu-Nh-n-T-o-V-ng-D-ng-Trong-Y-T-T-L-Thuy-t-n-Th-c-Ti-n-217ba08c537280bf88e9fe518fd7dec5",
+          date: "Tháng 11, 2023",
+          authors: "MNfine"
+        },
+        {
+          title: "DSA-Tìm hiểu cấu trúc dữ liệu cây",
+          link: "https://spectrum-swallow-230.notion.site/T-ng-Quan-V-C-u-Tr-c-C-y-Trong-Khoa-H-c-M-y-T-nh-217ba08c53728037866dd07a73dac046",
+          date: "Tháng 3, 2024",
+          authors: "MNfine, Huynh Thanh Dan, Nguyen Bui Nhat Anh"
         }
       ],
     },
@@ -408,8 +432,8 @@ export default function EnhancedPortfolioPage() {
               <a href={pageContent[language].navbar.projectsUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
                 {pageContent[language].navbar.projects}
               </a>
-              <a href={pageContent[language].navbar.articlesUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
-                {pageContent[language].navbar.articles}
+              <a href={pageContent[language].navbar.blogsUrl} className="text-sm sm:text-lg text-gray-300 hover:text-green-300 transition-colors duration-200 font-medium">
+                {pageContent[language].navbar.blogs}
               </a>
               <button 
                 type="button"
@@ -462,7 +486,7 @@ export default function EnhancedPortfolioPage() {
                 <a
                   href={pageContent[language].navbar[`${key}Url`]}
                   className="text-gray-200 hover:text-green-400 transition font-medium text-lg block py-2 px-4"
-                  onClick={() => setIsMobileMenuOpen(false)} // UPDATED: Close mobile menu on link click
+                  onClick={() => setIsMobileMenuOpen(false)} 
                 >
                   {pageContent[language].navbar[key]}
                 </a>
@@ -539,7 +563,7 @@ export default function EnhancedPortfolioPage() {
         ))}
       </div>
 
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-24 pb-10">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-28 pb-10">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -947,9 +971,9 @@ export default function EnhancedPortfolioPage() {
           </motion.div>
         </motion.section>
 
-        {/* Academic Articles & Research Section */}
+        {/* Blogs Section */}
         <motion.section
-          id="academic-articles" // ID for navigation
+          id="blogs" // ID for navigation
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -960,10 +984,10 @@ export default function EnhancedPortfolioPage() {
                      shadow-emerald-900/20"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-300 via-green-400 to-emerald-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] mb-6 sm:mb-8 pb-2">
-            {pageContent[language].academicArticles.title}
+            {pageContent[language].blogs.title}
           </h2>
           <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-12">
-            {pageContent[language].academicArticles.description}
+            {pageContent[language].blogs.description}
           </p>
 
           <motion.div
@@ -973,11 +997,11 @@ export default function EnhancedPortfolioPage() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
-            {pageContent[language].academicArticles.articles.map((article, idx) => (
+            {pageContent[language].blogs.blogs.map((blog, idx) => (
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                // Hover effect for article
+                // Hover effect for blog
                 whileHover={{
                   y: -10,
                   scale: 1.02,
@@ -990,15 +1014,15 @@ export default function EnhancedPortfolioPage() {
                 }}
                 className="bg-gradient-to-br from-black/90 via-gray-900/90 to-green-900/10 backdrop-blur-xl border-2 border-green-700/30 hover:border-green-500/60 rounded-3xl overflow-hidden shadow-xl transition-all duration-300 h-full flex flex-col"
               >
-                <a href={article.link} target="_blank" rel="noopener noreferrer" className="p-6 flex flex-col h-full">
+                <a href={blog.link} target="_blank" rel="noopener noreferrer" className="p-6 flex flex-col h-full">
                   <h3 className="text-xl sm:text-2xl font-bold text-green-300 mb-2 group-hover:text-green-200 transition-colors duration-300">
-                    {article.title}
+                    {blog.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-4">
-                    {article.authors} - {article.date}
+                    {blog.authors} - {blog.date}
                   </p>
                   {/* You can add a short abstract/description here if you have it */}
-                  {/* <p className="text-gray-300 mb-4 flex-grow">{article.abstract}</p> */}
+                  {/* <p className="text-gray-300 mb-4 flex-grow">{blog.abstract}</p> */}
                   <span className="text-emerald-400 hover:text-emerald-300 mt-auto flex items-center justify-end text-sm sm:text-base">
                     Read More <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                   </span>
