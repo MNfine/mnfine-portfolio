@@ -86,7 +86,7 @@ const pageContent = {
         },
         {
           title: "Enhancing User Experience with LLMs in Education",
-          link: "https://example.com/article3",
+          link: "https://spectrum-swallow-230.notion.site/N-ng-Cao-Tr-i-Nghi-m-Ng-i-D-ng-V-i-M-H-nh-Ng-n-Ng-L-n-LLM-Trong-Gi-o-D-c-217ba08c53728014bdbbd1c7216ad7c7",
           date: "June 2025",
           authors: "MNfine"
         },
@@ -192,8 +192,8 @@ const pageContent = {
         },
         {
           title: "Nâng cao trải nghiệm người dùng với LLM trong giáo dục",
-          link: "https://example.com/article3-vi",
-          date: "Tháng 1, 2024",
+          link: "https://spectrum-swallow-230.notion.site/N-ng-Cao-Tr-i-Nghi-m-Ng-i-D-ng-V-i-M-H-nh-Ng-n-Ng-L-n-LLM-Trong-Gi-o-D-c-217ba08c53728014bdbbd1c7216ad7c7",
+          date: "Tháng 6, 2025",
           authors: "MNfine"
         },
         {
