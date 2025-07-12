@@ -483,13 +483,26 @@ export default function EnhancedPortfolioPage() {
                 open: { y: 0, opacity: 1 },
                 closed: { y: -20, opacity: 0 }
               }}>
-                <a
-                  href={pageContent[language].navbar[`${key}Url`]}
-                  className="text-gray-200 hover:text-green-400 transition font-medium text-lg block py-2 px-4"
-                  onClick={() => setIsMobileMenuOpen(false)} 
-                >
-                  {pageContent[language].navbar[key]}
-                </a>
+                {key === 'contact' ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsContactModalOpen(true);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="text-gray-200 hover:text-green-400 transition font-medium text-lg block py-2 px-4 bg-transparent border-0 font-inherit cursor-pointer"
+                  >
+                    {pageContent[language].navbar[key]}
+                  </button>
+                ) : (
+                  <a
+                    href={pageContent[language].navbar[`${key}Url`]}
+                    className="text-gray-200 hover:text-green-400 transition font-medium text-lg block py-2 px-4"
+                    onClick={() => setIsMobileMenuOpen(false)} 
+                  >
+                    {pageContent[language].navbar[key]}
+                  </a>
+                )}
               </motion.li>
             );
           })}

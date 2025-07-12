@@ -96,25 +96,25 @@ const ContactModal = ({ isOpen, onClose, language }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="bg-gray-900/95 w-full max-w-lg m-4 rounded-xl shadow-2xl border border-emerald-700/30">
+    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 p-4">
+      <div className="bg-gray-900/95 w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl border border-emerald-700/30">
         {/* Close button */}
-        <div className="flex justify-end p-4">
+        <div className="flex justify-end p-3 sm:p-4">
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-emerald-400 transition-colors"
+            className="text-gray-400 hover:text-emerald-400 transition-colors p-1"
           >
-            <X className="h-6 w-6" />
+            <X className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
         </div>
 
-        <div className="px-6 pb-6">
-          <h2 className="text-2xl font-bold text-emerald-400 mb-2">{t.title}</h2>
-          <p className="text-gray-400 mb-6">{t.subtitle}</p>
+        <div className="px-4 pb-4 sm:px-6 sm:pb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-emerald-400 mb-2">{t.title}</h2>
+          <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">{t.subtitle}</p>
 
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
             <div>
-              <label htmlFor="name" className="block text-gray-300 mb-2">
+              <label htmlFor="name" className="block text-gray-300 mb-2 text-sm sm:text-base">
                 {t.name}
               </label>
               <input
@@ -122,13 +122,13 @@ const ContactModal = ({ isOpen, onClose, language }) => {
                 id="name"
                 name="name"
                 required
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-emerald-500 text-gray-300"
+                className="w-full px-3 py-2 sm:px-4 sm:py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-emerald-500 text-gray-300 text-sm sm:text-base"
                 placeholder={t.namePlaceholder}
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-gray-300 mb-2">
+              <label htmlFor="email" className="block text-gray-300 mb-2 text-sm sm:text-base">
                 {t.email}
               </label>
               <input
@@ -136,13 +136,13 @@ const ContactModal = ({ isOpen, onClose, language }) => {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-emerald-500 text-gray-300"
+                className="w-full px-3 py-2 sm:px-4 sm:py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-emerald-500 text-gray-300 text-sm sm:text-base"
                 placeholder={t.emailPlaceholder}
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-gray-300 mb-2">
+              <label htmlFor="message" className="block text-gray-300 mb-2 text-sm sm:text-base">
                 {t.message}
               </label>
               <textarea
@@ -150,7 +150,7 @@ const ContactModal = ({ isOpen, onClose, language }) => {
                 name="message"
                 required
                 rows="4"
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-emerald-500 text-gray-300 resize-none"
+                className="w-full px-3 py-2 sm:px-4 sm:py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-emerald-500 text-gray-300 resize-none text-sm sm:text-base"
                 placeholder={t.messagePlaceholder}
               ></textarea>
             </div>
@@ -159,7 +159,7 @@ const ContactModal = ({ isOpen, onClose, language }) => {
 
             {sendStatus.show && (
               <div 
-                className={`text-sm ${
+                className={`text-xs sm:text-sm ${
                   sendStatus.isError ? 'text-red-400' : 'text-emerald-400'
                 } text-center`}
               >
@@ -170,10 +170,10 @@ const ContactModal = ({ isOpen, onClose, language }) => {
             <button
               type="submit"
               disabled={isSending}
-              className="w-full py-2 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              className="w-full py-2.5 sm:py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm sm:text-base"
             >
               {isSending ? (
-                <Loader2 className="h-5 w-5 animate-spin" />
+                <Loader2 className="h-4 w-4 sm:h-5 sm:w-5 animate-spin" />
               ) : (
                 t.sendButton
               )}
