@@ -40,7 +40,7 @@ const pageContent = {
       ],
       exploring: "Right now, I’m exploring:",
       exploringPoints: [
-        "Legal AI in Vietnam using RAG (Redis + OpenAI)",
+        "Legal AI in Vietnam using RAG (Redis + Prompt Engineering)",
         "Lightweight systems development to understand how machines work"
       ]
     },
@@ -69,7 +69,7 @@ const pageContent = {
       viewOnGithub: "View on GitHub",
     },
     blogs: {
-      title: "Blogs (Coming soon)",
+      title: "Blogs",
       description: "Here are some blog posts I've written and shared.",
       blogs: [
         {
@@ -146,7 +146,7 @@ const pageContent = {
       ],
       exploring: "Hiện tại, tôi đang tìm hiểu:",
       exploringPoints: [
-        "AI pháp lý tại Việt Nam sử dụng RAG (Redis + OpenAI)",
+        "AI pháp lý tại Việt Nam sử dụng RAG (Redis + Kỹ thuật Prompt)",
         "Phát triển các hệ thống gọn nhẹ để hiểu cách máy móc hoạt động"
       ]
     },
@@ -175,7 +175,7 @@ const pageContent = {
       viewOnGithub: "Xem trên GitHub",
     },
     blogs: {
-      title: "Bài viết (Sắp ra mắt)",
+      title: "Bài viết",
       description: "Dưới đây là một số bài blog mà tôi đã viết và chia sẻ.",
       blogs: [
         {
@@ -249,8 +249,8 @@ const projectData = [
     icons: [<Database key="db1"/>],
     tags: ["OpenAI", "Redis", "RAG"],
     description: {
-      en: "Vietnamese legal chatbot powered by OpenAI & Redis (RAG)",
-      vi: "Chatbot pháp lý tiếng Việt được hỗ trợ bởi OpenAI & Redis (RAG)",
+      en: "Vietnamese legal chatbot powered by LaBSE model, Redis (RAG) and prompt engineering",
+      vi: "Chatbot pháp lý tiếng Việt được hỗ trợ bởi mô hình LaBSE, Redis (RAG) và kỹ thuật prompt",
     },
     githubLink: "https://github.com/MNfine/VietLawBot",
     // NEW: Add image/video preview
