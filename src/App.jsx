@@ -247,7 +247,7 @@ const projectData = [
     id: 2,
     title: "VietLawBot",
     icons: [<Database key="db1"/>],
-    tags: ["OpenAI", "Redis", "RAG"],
+    tags: ["LaBSE", "RAG", "API"],
     description: {
       en: "Vietnamese legal chatbot powered by LaBSE model, Redis (RAG) and prompt engineering",
       vi: "Chatbot pháp lý tiếng Việt được hỗ trợ bởi mô hình LaBSE, Redis (RAG) và kỹ thuật prompt",
