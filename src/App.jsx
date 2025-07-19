@@ -112,7 +112,8 @@ const pageContent = {
         "Once pulled an all-nighter to finish my first AI project because I was just too excited about it.",
         "Always eager to explore new technologies and share what I learn with friends.",
         "“Code then sleep” – MNfine's familiar philosophy during every deadline season!",
-        "Don't drink coffee, I just “run on energy drinks” and a passion for learning."
+        "Don't drink coffee, I just “run on energy drinks” and a passion for learning.",
+        "Can edit video, my style is motion graphic, but not so good yet."
       ]
     },
     footer: {
@@ -218,7 +219,8 @@ const pageContent = {
         "Từng thức khuya để hoàn thành dự án AI đầu tay chỉ vì… quá hứng thú.",
         "Luôn thích tìm hiểu các công nghệ mới và chia sẻ lại cho bạn bè.",
         "“Code xong mới ngủ” – triết lý quen thuộc của MNfine mỗi mùa deadline!",
-        "Không uống cà phê, chỉ “sống bằng nước tăng lực” và đam mê học hỏi."
+        "Không uống cà phê, chỉ “sống bằng nước tăng lực” và đam mê học hỏi.",
+        "Có thể chỉnh sửa video, phong cách của mình là đồ họa chuyển động, nhưng chưa giỏi lắm."
       ]
     },
     footer: {
