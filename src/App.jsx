@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Zap, Code, Database, Cpu, Bot, Gamepad2, Globe, Sparkles, ArrowRight } from "lucide-react";
+import { Github, ExternalLink, Zap, Code, Database, Cpu, Bot, Gamepad2, Globe, Sparkles, ArrowRight, KanbanSquare, Subscript } from "lucide-react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import React from 'react';
@@ -10,6 +10,7 @@ import TechnicalSkillBar from './components/TechnicalSkillBar';
 import ProfessionalSkillCircle from './components/ProfessionalSkillCircle';
 import { Menu, X } from "lucide-react";
 import ContactModal from './components/ContactModal';
+import { Gi3dGlasses } from "react-icons/gi";
 
 // pageContent 
 const pageContent = {
@@ -40,8 +41,10 @@ const pageContent = {
       ],
       exploring: "Right now, I’m exploring:",
       exploringPoints: [
-        "Legal AI in Vietnam using RAG (Redis + Prompt Engineering)",
-        "Lightweight systems development to understand how machines work"
+        "Marketplace for startup ideas, AI products, and digital innovations.",
+        "AI-powered platform that automatically generates TikTok and YouTube videos from topics or URLs.",
+        "Automated crypto trading system combining AI market analysis, SMC, and real-time execution.",
+        "Web3 and decentralized applications, especially those that can leverage AI for enhanced user experiences.",
       ]
     },
     skills: {
@@ -52,16 +55,18 @@ const pageContent = {
       title_technical: "Technical Skills",
       title_professional: "Professional Skills",
       technical: [
-        { name: "HTML", icon: "html", level: 90 },
-        { name: "CSS", icon: "css", level: 70 },
-        { name: "JavaScript", icon: "javascript", level: 55 },
-        { name: "Python", icon: "python", level: 75 },
-        { name: "React", icon: "react", level: 45 },
+        { name: "Python", icon: "python", level: 88 },
+        { name: "FastAPI", icon: "python", level: 82 },
+        { name: "Django", icon: "python", level: 78 },
+        { name: "JavaScript", icon: "javascript", level: 76 },
+        { name: "React", icon: "react", level: 74 },
+        { name: "Redis", icon: "python", level: 80 },
+        { name: "PostgreSQL", icon: "python", level: 72 },
       ],
       professional: [
         { name: "Creativity", level: 90 },
         { name: "Communication", level: 85 },
-        { name: "Problem Solving", level: 75 },
+        { name: "Problem Solving", level: 85 },
         { name: "Teamwork", level: 85 },
       ]
     },
@@ -79,18 +84,6 @@ const pageContent = {
           authors: "MNfine"
         },
         {
-          title: "Redis: High-Performance Caching for Real-Time Systems",
-          link: "https://spectrum-swallow-230.notion.site/Redis-B-Nh-m-T-c-Cao-V-a-N-ng-Cho-H-Th-ng-ng-D-ng-Hi-n-i-217ba08c5372806d8232f11709f55e5b",
-          date: "June 2025",
-          authors: "MNfine"
-        },
-        {
-          title: "Enhancing User Experience with LLMs in Education",
-          link: "https://spectrum-swallow-230.notion.site/N-ng-Cao-Tr-i-Nghi-m-Ng-i-D-ng-V-i-M-H-nh-Ng-n-Ng-L-n-LLM-Trong-Gi-o-D-c-217ba08c53728014bdbbd1c7216ad7c7",
-          date: "June 2025",
-          authors: "MNfine"
-        },
-        {
           title: "AI in Healthcare",
           link: "https://spectrum-swallow-230.notion.site/Tr-Tu-Nh-n-T-o-V-ng-D-ng-Trong-Y-T-T-L-Thuy-t-n-Th-c-Ti-n-217ba08c537280bf88e9fe518fd7dec5",
           date: "Nov 2023",
@@ -101,6 +94,24 @@ const pageContent = {
           link: "https://spectrum-swallow-230.notion.site/T-ng-Quan-V-C-u-Tr-c-C-y-Trong-Khoa-H-c-M-y-T-nh-217ba08c53728037866dd07a73dac046",
           date: "Mar 2024",
           authors: "MNfine, Huynh Thanh Dan, Nguyen Bui Nhat Anh"
+        },
+        {
+          title: "FastAPI vs Django for Backend",
+          link: "https://itprep.com.vn/fastapi-vs-django-for-backend/",
+          date: "Feb 2026",
+          authors: "MNfine"
+        },
+        {
+          title: "Useful Resources for IT Students Preparing for Interviews",
+          link: "https://viblo.asia/p/nhung-tai-nguyen-huu-ich-cho-sinh-vien-it-chuan-bi-phong-van-PoL7edjk4vk",
+          date: "Mar 2026",
+          authors: "MNfine"
+        },
+        {
+          title: "From AI Engineer to Agentic AI Engineer - 2026 Guide",
+          link: "https://itprep.com.vn/ky-su-ai-tac-tu-agentic-ai-engineer-huong-dan-2026/",
+          date: "Apr 2026",
+          authors: "MNfine"
         }
       ],
     },
@@ -147,8 +158,10 @@ const pageContent = {
       ],
       exploring: "Hiện tại, tôi đang tìm hiểu:",
       exploringPoints: [
-        "AI pháp lý tại Việt Nam sử dụng RAG (Redis + Kỹ thuật Prompt)",
-        "Phát triển các hệ thống gọn nhẹ để hiểu cách máy móc hoạt động"
+        "Marketplace cho ý tưởng khởi nghiệp, sản phẩm AI và đổi mới kỹ thuật số.",
+        "Nền tảng hỗ trợ AI tự động tạo video TikTok và YouTube từ chủ đề hoặc URL.",
+        "Hệ thống giao dịch crypto tự động kết hợp phân tích thị trường AI, SMC và thực thi thời gian thực.",
+        "Web3 và ứng dụng phi tập trung, đặc biệt là những ứng dụng có thể tận dụng AI để nâng cao trải nghiệm người dùng.",
       ]
     },
     skills: {
@@ -159,11 +172,13 @@ const pageContent = {
      title_technical: "Kỹ năng kỹ thuật",
      title_professional: "Kỹ năng nghề nghiệp",
      technical: [
-      { name: "HTML", icon: "html", level: 90 },
-      { name: "CSS", icon: "css", level: 70 },
-      { name: "JavaScript", icon: "javascript", level: 55 },
-      { name: "Python", icon: "python", level: 75 },
-      { name: "React", icon: "react", level: 45 },
+      { name: "Python", icon: "python", level: 88 },
+      { name: "FastAPI", icon: "python", level: 82 },
+      { name: "Django", icon: "python", level: 78 },
+      { name: "JavaScript", icon: "javascript", level: 76 },
+      { name: "React", icon: "react", level: 74 },
+      { name: "Redis", icon: "python", level: 80 },
+      { name: "PostgreSQL", icon: "python", level: 72 },
     ],
      professional: [
       { name: "Sáng tạo", level: 90 },
@@ -182,18 +197,6 @@ const pageContent = {
         {
           title: "Tác động của AI trong phân tích tài liệu pháp lý",
           link: "https://spectrum-swallow-230.notion.site/T-c-ng-c-a-AI-Trong-Ph-n-T-ch-T-i-Li-u-Ph-p-L-216ba08c537280f79530da13ac51b1d9",
-          date: "Tháng 5, 2024",
-          authors: "MNfine"
-        },
-        {
-          title: "Redis: Tăng tốc độ truy cập dữ liệu trong hệ thống thời gian thực",
-          link: "https://spectrum-swallow-230.notion.site/Redis-B-Nh-m-T-c-Cao-V-a-N-ng-Cho-H-Th-ng-ng-D-ng-Hi-n-i-217ba08c5372806d8232f11709f55e5b",
-          date: "Tháng 3, 2024",
-          authors: "MNfine"
-        },
-        {
-          title: "Nâng cao trải nghiệm người dùng với LLM trong giáo dục",
-          link: "https://spectrum-swallow-230.notion.site/N-ng-Cao-Tr-i-Nghi-m-Ng-i-D-ng-V-i-M-H-nh-Ng-n-Ng-L-n-LLM-Trong-Gi-o-D-c-217ba08c53728014bdbbd1c7216ad7c7",
           date: "Tháng 6, 2025",
           authors: "MNfine"
         },
@@ -208,6 +211,24 @@ const pageContent = {
           link: "https://spectrum-swallow-230.notion.site/T-ng-Quan-V-C-u-Tr-c-C-y-Trong-Khoa-H-c-M-y-T-nh-217ba08c53728037866dd07a73dac046",
           date: "Tháng 3, 2024",
           authors: "MNfine, Huynh Thanh Dan, Nguyen Bui Nhat Anh"
+        },
+        {
+          title: "FastAPI vs Django cho Backend",
+          link: "https://itprep.com.vn/fastapi-vs-django-for-backend/",
+          date: "Năm 2026",
+          authors: "MNfine"
+        },
+        {
+          title: "Những tài nguyên hữu ích cho sinh viên IT chuẩn bị phỏng vấn",
+          link: "https://viblo.asia/p/nhung-tai-nguyen-huu-ich-cho-sinh-vien-it-chuan-bi-phong-van-PoL7edjk4vk",
+          date: "Năm 2026",
+          authors: "MNfine"
+        },
+        {
+          title: "Kỹ sư AI tác tử (Agentic AI Engineer) - Hướng dẫn 2026",
+          link: "https://itprep.com.vn/ky-su-ai-tac-tu-agentic-ai-engineer-huong-dan-2026/",
+          date: "Năm 2026",
+          authors: "MNfine"
         }
       ],
     },
@@ -233,26 +254,54 @@ const pageContent = {
 const projectData = [
   {
     id: 1,
-    title: "llama2-lawbot",
-    icons: [<Bot key="bot1"/>],
-    tags: ["Llama 2", "NLP", "Legal AI"],
+    title: "Website-SkyPlan",
+    icons: [<Globe key="globe1"/>],
+    tags: ["Frontend", "UI/UX", "Web"],
     description: {
-      en: "Legal chatbot using Llama 2, RAG & prompt engineering",
-      vi: "Chatbot pháp lý sử dụng Llama 2, RAG & kỹ thuật prompt",
+      en: "Portfolio and website experience project focused on modern interface and usability.",
+      vi: "Dự án website tập trung vào giao diện hiện đại và trải nghiệm người dùng.",
     },
-    githubLink: "https://github.com/MNfine/llama2-lawbot",
+    githubLink: "https://github.com/MNfine/Website-SkyPlan",
      // NEW: Add image/video preview
     previewImage: "/images/lawbot_screenshot.png", // Path to your project screenshot
     previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
   },
   {
     id: 2,
-    title: "VietLawBot",
-    icons: [<Database key="db1"/>],
-    tags: ["LaBSE", "RAG", "API"],
+    title: "bot-auto-trading",
+    icons: [<Zap key="zap1"/>],
+    tags: ["Automation", "Trading", "Python"],
     description: {
-      en: "Vietnamese legal chatbot powered by LaBSE model, Redis (RAG) and prompt engineering",
-      vi: "Chatbot pháp lý tiếng Việt được hỗ trợ bởi mô hình LaBSE, Redis (RAG) và kỹ thuật prompt",
+      en: "Automated trading bot with rule-based execution and monitoring workflows.",
+      vi: "Bot giao dịch tự động với cơ chế thực thi theo luật và luồng giám sát.",
+    },
+    githubLink: "https://github.com/MNfine/bot-auto-trading",
+    // NEW: Add image/video preview
+    previewImage: "/images/lawbot_screenshot.png", // Path to your project screenshot
+    previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
+  },
+  {
+    id: 3,
+    title: "Fire-Safety-Management-System",
+    icons: [<Database key="db1"/>],
+    tags: ["Management System", "Fullstack", "Team Project"],
+    description: {
+      en: "A collaborative system to support fire safety operations, records, and process management.",
+      vi: "Hệ thống cộng tác hỗ trợ vận hành an toàn phòng cháy chữa cháy và quản lý quy trình.",
+    },
+    githubLink: "https://github.com/nghiagenz2/Fire-Safety-Management-System",
+    // NEW: Add image/video preview
+    previewImage: "/images/lawbot_screenshot.png", // Path to your project screenshot
+    previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
+  },
+  {
+    id: 4,
+    title: "VietLawBot",
+    icons: [<Bot key="bot1"/>],
+    tags: ["Legal AI", "RAG", "Prompt Engineering"],
+    description: {
+      en: "Vietnamese legal chatbot built with retrieval-augmented generation and legal-focused prompts.",
+      vi: "Chatbot pháp lý tiếng Việt được xây dựng với RAG và prompt chuyên biệt cho ngữ cảnh pháp lý.",
     },
     githubLink: "https://github.com/MNfine/VietLawBot",
     // NEW: Add image/video preview
@@ -260,57 +309,29 @@ const projectData = [
     previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
   },
   {
-    id: 3,
-    title: "VietNamAdventures",
-    icons: [<Gamepad2 key="gamepad2"/>],
-    tags: ["Game Dev", "Storytelling", "Interactive"],
-    description: {
-      en: "Interactive storytelling game based on Vietnamese folklore",
-      vi: "Trò chơi kể chuyện tương tác dựa trên văn hóa dân gian Việt Nam",
-    },
-    githubLink: "https://github.com/MNfine/VietNamAdventures",
-    // NEW: Add image/video preview
-    previewImage: "/images/lawbot_screenshot.png", // Path to your project screenshot
-    previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
-  },
-  {
-    id: 4,
-    title: "riscv-iss",
-    icons: [<Cpu key="cpu1"/>],
-    tags: ["RISC-V", "Assembly", "Simulation"],
-    description: {
-      en: "Instruction Set Simulator for RISC-V architecture",
-      vi: "Mô phỏng Tập lệnh cho kiến trúc RISC-V",
-    },
-    githubLink: "https://github.com/MNfine/riscv-iss",
-    // NEW: Add image/video preview
-    previewImage: "/images/lawbot_screenshot.png", // Path to your project screenshot
-    previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
-  },
-  {
     id: 5,
-    title: "riscv-assembler",
-    icons: [<Code key="code1"/>],
-    tags: ["Compiler", "Assembly", "Education"],
+    title: "le-petit-prince",
+    icons: [<Sparkles key="sparkles1"/>],
+    tags: ["Creative", "Story", "Frontend"],
     description: {
-      en: "Educational assembler written from scratch",
-      vi: "Trình hợp dịch (assembler) phục vụ học tập, được tự xây dựng từ đầu",
+      en: "A creative web project inspired by The Little Prince, focused on narrative interaction.",
+      vi: "Dự án web sáng tạo lấy cảm hứng từ Hoàng Tử Bé, tập trung vào trải nghiệm kể chuyện.",
     },
-    githubLink: "https://github.com/MNfine/riscv-assembler",
+    githubLink: "https://github.com/MNfine/le-petit-prince",
     // NEW: Add image/video preview
     previewImage: "/images/lawbot_screenshot.png", // Path to your project screenshot
     previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
   },
   {
     id: 6,
-    title: "Demo-E-commerce-using-Redis",
-    icons: [<Zap key="zap1"/>],
-    tags: ["Redis", "Real-time", "E-commerce"],
+    title: "AI-SEO-Content-MVP",
+    icons: [<Code key="code1"/>],
+    tags: ["AI", "SEO", "MVP"],
     description: {
-      en: "Real-time e-commerce demo powered by Redis",
-      vi: "Demo mua sắm thời gian thực ứng dụng Redis",
+      en: "MVP for generating SEO-friendly content with AI-assisted workflows and editing support.",
+      vi: "MVP tạo nội dung chuẩn SEO với quy trình hỗ trợ bởi AI và khả năng biên tập linh hoạt.",
     },
-    githubLink: "https://github.com/MNfine/Demo-E-commerce-using-Redis",
+    githubLink: "https://github.com/MNfine/AI-SEO-Content-MVP",
     // NEW: Add image/video preview
     previewImage: "/images/lawbot_screenshot.png", // Path to your project screenshot
     previewVideo: "https://www.youtube.com/embed/your_video_id" // Link to a short demo video
@@ -767,8 +788,10 @@ export default function EnhancedPortfolioPage() {
                 transition={{ delay: idx * 0.1, duration: 0.5, ease: "easeOut" }}
               >
                 {/* Icons */}
-                {idx === 0 && <Cpu className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />}
-                {idx === 1 && <Globe className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />}
+                {idx === 0 && <Globe className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />}
+                {idx === 1 && <Sparkles className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />}
+                {idx === 2 && <Cpu className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />}
+                {idx === 3 && <Zap className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />}
                 <span className="text-gray-200 text-base md:text-lg">{point}</span>
               </motion.li>
             ))}
@@ -782,7 +805,7 @@ export default function EnhancedPortfolioPage() {
           animate="show"
           className="flex flex-wrap gap-4 justify-center my-16"
         >
-          {["AI & ML", "Startup Mindset", "OpenAI", "Redis", "Full Stack", "System Design"].map((tag, idx) => (
+          {["AI & ML", "Startup Mindset", "OpenAI", "Redis", "Full Stack", "System Design", "Automation"].map((tag, idx) => (
             <motion.div
               key={idx}
               variants={itemVariants}
