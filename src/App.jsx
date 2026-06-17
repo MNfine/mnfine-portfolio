@@ -56,8 +56,8 @@ const pageContent = {
       title_professional: "Professional Skills",
       technical: [
         { name: "Python", icon: "python", level: 88 },
-        { name: "RESTAPI", icon: "python", level: 82 },
-        { name: "Flask", icon: "python", level: 78 },
+        { name: "RESTAPI", icon: "python", level: 78 },
+        { name: "Flask", icon: "python", level: 85 },
         { name: "JavaScript", icon: "javascript", level: 76 },
         { name: "React", icon: "react", level: 74 },
         { name: "Redis", icon: "python", level: 80 },
@@ -173,8 +173,8 @@ const pageContent = {
      title_professional: "Kỹ năng nghề nghiệp",
      technical: [
       { name: "Python", icon: "python", level: 88 },
-      { name: "REST API", icon: "python", level: 82 },
-      { name: "Flask", icon: "python", level: 78 },
+      { name: "REST API", icon: "python", level: 78 },
+      { name: "Flask", icon: "python", level: 85 },
       { name: "JavaScript", icon: "javascript", level: 76 },
       { name: "React", icon: "react", level: 74 },
       { name: "Redis", icon: "python", level: 80 },
